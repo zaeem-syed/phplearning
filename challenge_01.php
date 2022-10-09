@@ -39,3 +39,5 @@ echo $new->weight_kg;
 
 
 ?>
+
+<a href="inheritance.php">Inheritance</a>
