@@ -1,46 +1,33 @@
 <?php 
 
-class calculation {
-public $a,$b,$c;
-private $z;
+class Student {
+
+}
+
+class Products{
+
+}
 
 
-function sum($a,$b)
+$class_name=get_declared_classes();
+echo "Classes ".implode(" ,",$class_name). '<br>';
+
+$classes=['products','student','Student','gender'];
+foreach($classes as $class)
 {
-    $this->a=$a;
-    $this->b=$b;
-    $c=$a+$b;
-    return $c;
+    if(class_exists($class))
+    {
+        echo "{$class} is a decleared class <br>";
+    }else{
+        echo "{$class} is  not a decleared class <br>";
+    }
 }
-
-public function setz($z)
-{
-    $this->z=$z;
-}
-public function name()
-{
-    return $this->z;
-}
-
-
-
-}
-
-
-$obj =new calculation();
-echo $obj->sum(10,5);
-$obj->setz("helloworld");
-
-echo $obj->name();
-
-
-
-
-
-
-
 
 
 
 
 ?>
+
+<html>
+    <a href="instance.php">Instance </a>
+</html>
